@@ -17,8 +17,8 @@ ClioWP Blocks Boilerplate is a Free WordPress Gutenberg block-type Plugin Boiler
 * Add `start` and `build` scripts in package.json
 ```javascript
   "scripts": {
-    "start": "wp-scripts start",
-    "build": "wp-scripts build",
+    "start": "wp-scripts start src/editor.js src/frontend.js",
+    "build": "wp-scripts build src/editor.js src/frontend.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
 ```
