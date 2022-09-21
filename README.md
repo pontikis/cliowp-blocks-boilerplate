@@ -60,4 +60,10 @@ Also it makes assets (JS and CSS) management more easy.
   * `style`: CSS will be enqueued both in the editor the front end.
   * `icon`: from Dashicons without the dashicon- prefix https://developer.wordpress.org/resource/dashicons
 
+As you can see in the official documentation
+  * there is a `viewScript` property, but it will not be used if you are using a PHP render callback
+  * there is not (at least for now) a `viewStyle` property (https://github.com/WordPress/gutenberg/issues/41236)
+
+So, I use `script` and `style` for front end assets.
+
 Reference: https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/
