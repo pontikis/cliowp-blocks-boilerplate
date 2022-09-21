@@ -10,6 +10,10 @@ ClioWP Blocks Boilerplate is a Free WordPress Gutenberg block-type Plugin Boiler
 
 ## How to use it
 
+In order to create a custom Gutenberg block, actually, you have to create a plugin. A block-type WordPress plugin.
+
+Official documentation: https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/
+
 * Create a folder in wp-content/plugins for your block-type plugin
 * Copy boilerplate in this folder
 * Define your project with `npm init` (this will create `package.json` file)
@@ -24,4 +28,36 @@ ClioWP Blocks Boilerplate is a Free WordPress Gutenberg block-type Plugin Boiler
 ```
 * Run `npm run start`
 
-Details https://www.pontikis.net/blog/how-to-write-js-and-css-in-wordpress-with-industry-standard-tools
+Details at: https://www.pontikis.net/blog/how-to-write-js-and-css-in-wordpress-with-industry-standard-tools
+
+## The block.json file
+
+`block.json` (in the root of your plugin folder) is the canonical way to register a block-type plugin since WordPress 5.8
+
+This file allows your plugin to be included in WordPress block directory https://wordpress.org/plugins/browse/block/
+
+Also it makes assets (JS and CSS) management more easy.
+
+```javascript
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "cliowp-blocks/boilerplate",
+    "title": "Hello Gutenberg",
+    "category": "common",
+    "icon": "universal-access",
+    "description": "Free WordPress Gutenberg block-type Plugin Example for Developers",
+    "editorScript": "file:./build/editor.js",
+    "editorStyle": "file:./build/editor.css",
+    "script": "file:./build/frontend.js",
+    "style": "file:./build/frontend.css"
+}
+```
+
+  * `editorScript`: Javascript will only be enqueued in the context of the editor.
+  * `editorStyle`: CSS will only be enqueued in the context of the editor.
+  * `script`: Javascript will be enqueued both in the editor the front end.
+  * `style`: CSS will be enqueued both in the editor the front end.
+  * `icon`: from Dashicons without the dashicon- prefix https://developer.wordpress.org/resource/dashicons
+
+Reference: https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/
