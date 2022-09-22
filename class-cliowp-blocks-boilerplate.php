@@ -79,7 +79,7 @@ class ClioWP_Blocks_Boilerplate {
 	 * @param array $attributes The attributes to pass to PHP.
 	 */
 	public function render_callback( $attributes ) {
-		return '<p class="paint-it-yellow">Hello Gutenberg!</p>';
+		return '<p class="paint-it-yellow">Hello Gutenberg from ClioWP blocks!</p>';
 	}
 
 }
