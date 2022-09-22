@@ -1,0 +1,14 @@
+# Visual Studio Code workspace -------------------------------------------------
+/.vscode
+
+# Sublime Text workspace -------------------------------------------------------
+cliowp-blocks-boilerplate.sublime-workspace
+
+# JetBrains PhpStorm IDE files -------------------------------------------------
+/.idea/
+
+# Front end assets -------------------------------------------------------------
+/node_modules/
+
+# Gettext backup files (by Loco Translate) -------------------------------------
+*.po~
