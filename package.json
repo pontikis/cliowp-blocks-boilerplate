@@ -1,0 +1,30 @@
+{
+  "name": "cliowp-blocks-boilerplate",
+  "version": "1.0.0",
+  "description": "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers",
+  "main": "editor.js",
+  "scripts": {
+    "start": "wp-scripts start src/editor.js src/frontend.js",
+    "build": "wp-scripts build src/editor.js src/frontend.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pontikis/cliowp-blocks-boilerplate.git"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "block",
+    "gutenberg"
+  ],
+  "author": "Christos Pontikis",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/pontikis/cliowp-blocks-boilerplate/issues"
+  },
+  "homepage": "https://github.com/pontikis/cliowp-blocks-boilerplate#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "^24.1.0"
+  }
+}
