@@ -1,0 +1,13 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "cliowp-blocks/boilerplate",
+    "title": "ClioWP block boilerplate",
+    "category": "common",
+    "icon": "star-empty",
+    "description": "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers",
+    "editorScript": "file:./build/editor.js",
+    "editorStyle": "file:./build/editor.css",
+    "script": "file:./build/frontend.js",
+    "style": "file:./build/frontend.css"
+}
