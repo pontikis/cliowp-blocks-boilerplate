@@ -46,7 +46,7 @@ class ClioWP_Blocks_Boilerplate {
 		register_block_type_from_metadata(
 			__DIR__,
 			array(
-				'render_callback' => array( $this, 'render_callback' )
+				'render_callback' => array( $this, 'render_callback' ),
 			)
 		);
 
@@ -64,11 +64,8 @@ class ClioWP_Blocks_Boilerplate {
 	 */
 	public function register_block_without_block_json() {
 
-		// i18n - PHP Localization.
-		load_plugin_textdomain( 'td-cliowp-blocks-boilerplate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-
 		wp_register_script( 'editor_js', plugin_dir_url( __FILE__ ) . 'build/editor.js', array( 'wp-blocks', 'wp-i18n', 'wp-editor' ), '1.0.0', true );
-		wp_register_script( 'frontend_js', plugin_dir_url( __FILE__ ) . 'build/editor.js', array(), '1.0.0', true );
+		wp_register_script( 'frontend_js', plugin_dir_url( __FILE__ ) . 'build/editor.js', array( 'wp-i18n' ), '1.0.0', true );
 		wp_register_style( 'editor_css', plugin_dir_url( __FILE__ ) . 'build/frontend.css', array(), '1.0.0' );
 		wp_register_style( 'frontend_css', plugin_dir_url( __FILE__ ) . 'build/frontend.css', array(), '1.0.0' );
 
@@ -82,6 +79,12 @@ class ClioWP_Blocks_Boilerplate {
 				'style'           => 'frontend_css',
 			)
 		);
+
+		// i18n - PHP Localization.
+		load_plugin_textdomain( 'td-cliowp-blocks-boilerplate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+		// i18n - Load JSON files for JS.
+		wp_set_script_translations( 'editor_js', 'td-cliowp-blocks-boilerplate', plugin_dir_path( __FILE__ ) . 'languages' );
 	}
 
 	/**
