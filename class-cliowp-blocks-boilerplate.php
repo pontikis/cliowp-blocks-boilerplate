@@ -70,7 +70,7 @@ class ClioWP_Blocks_Boilerplate {
 		wp_register_style( 'frontend_css', plugin_dir_url( __FILE__ ) . 'build/frontend.css', array(), '1.0.0' );
 
 		register_block_type(
-			'cliowp-blocks/hello-gutenberg',
+			'cliowp-blocks/boilerplate',
 			array(
 				'render_callback' => array( $this, 'render_callback' ),
 				'editor_script'   => 'editor_js',
