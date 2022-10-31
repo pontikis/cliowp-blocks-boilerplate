@@ -1,16 +1,21 @@
 import { registerBlockType } from "@wordpress/blocks";
 import { useBlockProps } from "@wordpress/block-editor";
-import name from '../../../block.json';
+import blockJson from "../../../block.json";
+
+const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
+const _x = wp.i18n._x; // you may also use: import { _x } from "@wordpress/i18n";
 
 class RegisterBlock {
     /**
      * The constructor
      */
     constructor() {
-        registerBlockType(name, {
+        registerBlockType(blockJson, {
+            title: _x("ClioWP Blocks Boilerplate", "block title in Gutenberg", "td-cliowp-blocks-boilerplate"),
+            description: _x("Free WordPress Gutenberg block-type Plugin Boilerplate for Developers", "block description in Gutenberg", "td-cliowp-blocks-boilerplate"),
             edit: this.BlockInEditor,
             save: this.BlockInFrontEnd
-        })
+        });
     }
 
     /**
@@ -25,9 +30,9 @@ class RegisterBlock {
 
         return (
             <div {...blockProps}>
-                You can manage this block here.
+                {__("Manage this block here!", "td-cliowp-blocks-boilerplate")}
             </div>
-        )
+        );
     }
 
     /**
@@ -40,6 +45,6 @@ class RegisterBlock {
     }
 
 
-  }
+}
 
-  export default RegisterBlock;
+export default RegisterBlock;

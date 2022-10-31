@@ -20,6 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
+
+const _x = wp.i18n._x; // you may also use: import { _x } from "@wordpress/i18n";
 
 class RegisterBlock {
   /**
@@ -27,6 +30,8 @@ class RegisterBlock {
    */
   constructor() {
     (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_3__, {
+      title: _x("ClioWP Blocks Boilerplate", "block title in Gutenberg", "td-cliowp-blocks-boilerplate"),
+      description: _x("Free WordPress Gutenberg block-type Plugin Boilerplate for Developers", "block description in Gutenberg", "td-cliowp-blocks-boilerplate"),
       edit: this.BlockInEditor,
       save: this.BlockInFrontEnd
     });
@@ -41,7 +46,7 @@ class RegisterBlock {
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
       className: "paint-it-gray"
     });
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, "You can manage this block here.");
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, __("Manage this block here!", "td-cliowp-blocks-boilerplate"));
   }
   /**
    * What will apperar in site front end
@@ -108,7 +113,7 @@ module.exports = window["wp"]["element"];
   \********************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"cliowp-blocks/boilerplate","title":"ClioWP block boilerplate","category":"common","icon":"star-empty","description":"Free WordPress Gutenberg block-type Plugin Boilerplate for Developers","editorScript":"file:./build/editor.js","editorStyle":"file:./build/editor.css","script":"file:./build/frontend.js","style":"file:./build/frontend.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"cliowp-blocks/boilerplate","title":"ClioWP Blocks Boilerplate","category":"common","icon":"star-empty","textdomain":"td-cliowp-blocks-boilerplate","description":"Free WordPress Gutenberg block-type Plugin Boilerplate for Developers","editorScript":"file:./build/editor.js","editorStyle":"file:./build/editor.css","script":"file:./build/frontend.js","style":"file:./build/frontend.css"}');
 
 /***/ })
 
@@ -190,6 +195,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/editor.scss */ "./css/editor.scss");
 /* harmony import */ var _modules_editor_RegisterBlock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/editor/RegisterBlock */ "./src/modules/editor/RegisterBlock.js");
 
+ // eslint-disable-next-line no-unused-vars
 
 const registerBlock = new _modules_editor_RegisterBlock__WEBPACK_IMPORTED_MODULE_1__["default"]();
 }();

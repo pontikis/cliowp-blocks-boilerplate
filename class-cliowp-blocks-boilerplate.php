@@ -6,10 +6,10 @@
  * Version: 1.0.0
  * Author: Christos Pontikis
  * Author URI: https://pontikis.net
- * Text Domain: cliowp-hello-gutenberg
+ * Text Domain: td-cliowp-blocks-boilerplate
  * Domain Path: /languages
  * Requires PHP: 5.6.20
- * Tested up to: 6.0.2
+ * Tested up to: 6.0.3
  * License: GPLv2 or later
  *
  * @package ClioWP_Blocks_Boilerplate
@@ -43,12 +43,19 @@ class ClioWP_Blocks_Boilerplate {
 	 * the following register_block_without_block_json() function
 	 */
 	public function register_block() {
-		register_block_type(
+		register_block_type_from_metadata(
 			__DIR__,
 			array(
-				'render_callback' => array( $this, 'render_callback' ),
+				'render_callback' => array( $this, 'render_callback' )
 			)
 		);
+
+		// i18n - PHP Localization.
+		load_plugin_textdomain( 'td-cliowp-blocks-boilerplate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+		// i18n - Load JSON files for JS.
+		$script_handle = generate_block_asset_handle( 'cliowp-blocks-boilerplate', 'editorScript' );
+		wp_set_script_translations( $script_handle, 'td-cliowp-blocks-boilerplate', plugin_dir_path( __FILE__ ) . 'languages' );
 	}
 
 	/**
@@ -56,6 +63,10 @@ class ClioWP_Blocks_Boilerplate {
 	 * Unused fucntion - just for reference
 	 */
 	public function register_block_without_block_json() {
+
+		// i18n - PHP Localization.
+		load_plugin_textdomain( 'td-cliowp-blocks-boilerplate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
 		wp_register_script( 'editor_js', plugin_dir_url( __FILE__ ) . 'build/editor.js', array( 'wp-blocks', 'wp-i18n', 'wp-editor' ), '1.0.0', true );
 		wp_register_script( 'frontend_js', plugin_dir_url( __FILE__ ) . 'build/editor.js', array(), '1.0.0', true );
 		wp_register_style( 'editor_css', plugin_dir_url( __FILE__ ) . 'build/frontend.css', array(), '1.0.0' );
@@ -79,7 +90,7 @@ class ClioWP_Blocks_Boilerplate {
 	 * @param array $attributes The attributes to pass to PHP.
 	 */
 	public function render_callback( $attributes ) {
-		return '<p class="paint-it-yellow">Hello Gutenberg from ClioWP blocks!</p>';
+		return '<p class="paint-it-yellow">' . esc_html__( 'Hello Gutenberg from ClioWP blocks!', 'td-cliowp-blocks-boilerplate' ) . '</p>';
 	}
 
 }
