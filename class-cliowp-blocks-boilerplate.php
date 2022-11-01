@@ -65,8 +65,8 @@ class ClioWP_Blocks_Boilerplate {
 	public function register_block_without_block_json() {
 
 		wp_register_script( 'editor_js', plugin_dir_url( __FILE__ ) . 'build/editor.js', array( 'wp-blocks', 'wp-i18n', 'wp-editor' ), '1.0.0', true );
-		wp_register_script( 'frontend_js', plugin_dir_url( __FILE__ ) . 'build/editor.js', array( 'wp-i18n' ), '1.0.0', true );
-		wp_register_style( 'editor_css', plugin_dir_url( __FILE__ ) . 'build/frontend.css', array(), '1.0.0' );
+		wp_register_script( 'frontend_js', plugin_dir_url( __FILE__ ) . 'build/frontend.js', array( 'wp-i18n' ), '1.0.0', true );
+		wp_register_style( 'editor_css', plugin_dir_url( __FILE__ ) . 'build/editor.css', array(), '1.0.0' );
 		wp_register_style( 'frontend_css', plugin_dir_url( __FILE__ ) . 'build/frontend.css', array(), '1.0.0' );
 
 		register_block_type(
