@@ -42,11 +42,24 @@ class RegisterBlock {
    */
 
 
-  BlockInEditor() {
+  BlockInEditor(props) {
     const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-      className: "paint-it-gray"
+      className: "msg-input-in-editor"
     });
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, __("Manage this block here!", "td-cliowp-blocks-boilerplate"));
+
+    function updateMessage(event) {
+      props.setAttributes({
+        "message": event.target.value
+      });
+    }
+
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      placeholder: __("Your message here...", "td-cliowp-blocks-boilerplate"),
+      className: "msg-input-in-editor",
+      value: props.attributes.message,
+      onChange: updateMessage
+    }));
   }
   /**
    * What will apperar in site front end
@@ -113,7 +126,7 @@ module.exports = window["wp"]["element"];
   \********************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"cliowp-blocks/boilerplate","title":"ClioWP Blocks Boilerplate","category":"common","icon":"star-empty","textdomain":"td-cliowp-blocks-boilerplate","description":"Free WordPress Gutenberg block-type Plugin Boilerplate for Developers","editorScript":"file:./build/editor.js","editorStyle":"file:./build/editor.css","script":"file:./build/frontend.js","style":"file:./build/frontend.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"cliowp-blocks/boilerplate","title":"ClioWP Blocks Boilerplate","category":"common","icon":"star-empty","description":"Free WordPress Gutenberg block-type Plugin Boilerplate for Developers","attributes":{"message":{"type":"string"}},"textdomain":"td-cliowp-blocks-boilerplate","editorScript":"file:./build/editor.js","editorStyle":"file:./build/editor.css","script":"file:./build/frontend.js","style":"file:./build/frontend.css"}');
 
 /***/ })
 
