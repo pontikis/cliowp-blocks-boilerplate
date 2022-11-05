@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ClioWP Blocks Boilerplate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-30 13:03+0000\n"
-"PO-Revision-Date: 2022-10-30 14:20+0000\n"
+"POT-Creation-Date: 2022-11-05 19:15+0000\n"
+"PO-Revision-Date: 2022-11-05 19:17+0000\n"
 "Last-Translator: Christos\n"
 "Language-Team: Ελληνικά\n"
 "Language: el\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.3; wp-6.0.3\n"
+"X-Loco-Version: 2.6.3; wp-6.1\n"
 "X-Domain: td-cliowp-blocks-boilerplate"
 
 #: build/editor.js:34 src/modules/editor/RegisterBlock.js:15
@@ -27,7 +27,7 @@ msgstr "ClioWP Πρότυπο Μπλοκ"
 
 #. Author of the plugin
 msgid "Christos Pontikis"
-msgstr "Christos Pontikis"
+msgstr ""
 
 #. Name of the plugin
 msgid "ClioWP Blocks Boilerplate"
@@ -37,18 +37,14 @@ msgstr "ClioWP Πρότυπο Μπλοκ"
 msgid "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers"
 msgstr "ClioWP Πρότυπο Gutenberg Μπλοκ για WordPress Developers"
 
-#: class-cliowp-blocks-boilerplate.php:93
-msgid "Hello Gutenberg from ClioWP blocks!"
-msgstr "Γεια σας από ClioWP blocks!"
-
 #. URI of the plugin
 msgid "https://github.com/pontikis/cliowp-blocks-boilerplate"
-msgstr "https://github.com/pontikis/cliowp-blocks-boilerplate"
+msgstr ""
 
 #. Author URI of the plugin
 msgid "https://pontikis.net"
-msgstr "https://pontikis.net"
+msgstr ""
 
-#: build/editor.js:49 src/modules/editor/RegisterBlock.js:33
-msgid "Manage this block here!"
-msgstr "Επεξεργαστείτε το μπλοκ!"
+#: build/editor.js:58 src/modules/editor/RegisterBlock.js:37
+msgid "Your message here..."
+msgstr "Το μήνυμά σας εδώ..."
