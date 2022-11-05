@@ -22,15 +22,19 @@ class RegisterBlock {
      * What will apperar in Gutenberg Editor
      * @returns string
      */
-    BlockInEditor() {
+    BlockInEditor(props) {
 
         const blockProps = useBlockProps({
-            className: "paint-it-gray"
+            className: "msg-input-in-editor"
         });
+
+        function updateMessage(event) {
+            props.setAttributes({"message": event.target.value});
+        }
 
         return (
             <div {...blockProps}>
-                {__("Manage this block here!", "td-cliowp-blocks-boilerplate")}
+                <input type="text" placeholder={__("Your message here...", "td-cliowp-blocks-boilerplate")} className="msg-input-in-editor" value={props.attributes.message} onChange={updateMessage} />
             </div>
         );
     }

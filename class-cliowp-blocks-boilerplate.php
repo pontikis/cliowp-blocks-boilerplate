@@ -9,7 +9,7 @@
  * Text Domain: td-cliowp-blocks-boilerplate
  * Domain Path: /languages
  * Requires PHP: 5.6.20
- * Tested up to: 6.0.3
+ * Tested up to: 6.1
  * License: GPLv2 or later
  *
  * @package ClioWP_Blocks_Boilerplate
@@ -93,7 +93,12 @@ class ClioWP_Blocks_Boilerplate {
 	 * @param array $attributes The attributes to pass to PHP.
 	 */
 	public function render_callback( $attributes ) {
-		return '<p class="paint-it-yellow">' . esc_html__( 'Hello Gutenberg from ClioWP blocks!', 'td-cliowp-blocks-boilerplate' ) . '</p>';
+		if ( $attributes['message'] ) {
+			return '<p class="msg-in-front-end">' . esc_html( $attributes['message'] ) . '</p>';
+		}
+
+		return null;
+
 	}
 
 }
