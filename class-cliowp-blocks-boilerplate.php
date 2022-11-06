@@ -93,12 +93,11 @@ class ClioWP_Blocks_Boilerplate {
 	 * @param array $attributes The attributes to pass to PHP.
 	 */
 	public function render_callback( $attributes ) {
-		if ( $attributes['message'] ) {
-			return '<p class="msg-in-front-end">' . esc_html( $attributes['message'] ) . '</p>';
+		if ( isset( $attributes['headline'] ) && $attributes['headline'] ) {
+			return '<h2>' . esc_html( $attributes['headline'] ) . '</h2>';
 		}
 
 		return null;
-
 	}
 
 }
