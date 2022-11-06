@@ -16,6 +16,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../block.json */ "./block.json");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -43,22 +46,12 @@ class RegisterBlock {
 
 
   BlockInEditor(props) {
-    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-      className: "msg-input-in-editor"
-    });
+    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
 
-    function updateMessage(event) {
-      props.setAttributes({
-        "message": event.target.value
-      });
-    }
+    var labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate");
 
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
-      type: "text",
-      placeholder: __("Your message here...", "td-cliowp-blocks-boilerplate"),
-      className: "msg-input-in-editor",
-      value: props.attributes.message,
-      onChange: updateMessage
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
+      label: labelHeadline
     }));
   }
   /**
@@ -110,6 +103,16 @@ module.exports = window["wp"]["blocks"];
 
 /***/ }),
 
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ (function(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -126,7 +129,7 @@ module.exports = window["wp"]["element"];
   \********************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"cliowp-blocks/boilerplate","title":"ClioWP Blocks Boilerplate","category":"common","icon":"star-empty","description":"Free WordPress Gutenberg block-type Plugin Boilerplate for Developers","attributes":{"message":{"type":"string"}},"textdomain":"td-cliowp-blocks-boilerplate","editorScript":"file:./build/editor.js","editorStyle":"file:./build/editor.css","script":"file:./build/frontend.js","style":"file:./build/frontend.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"cliowp-blocks/boilerplate","title":"ClioWP Blocks Boilerplate","category":"common","icon":"star-empty","description":"Free WordPress Gutenberg block-type Plugin Boilerplate for Developers","attributes":{"headline":{"type":"string"}},"textdomain":"td-cliowp-blocks-boilerplate","editorScript":"file:./build/editor.js","editorStyle":"file:./build/editor.css","script":"file:./build/frontend.js","style":"file:./build/frontend.css"}');
 
 /***/ })
 

@@ -3,9 +3,11 @@
   \****************************************************************************************************************************************************************************************************************************************/
 /* 3rd party packages */
 /* Modules */
-.msg-input-in-editor {
-  width: 100%;
-  font-size: 25px;
+.cliowp-container {
+  padding: 20px;
+  border-radius: 2px;
+  border: 1px solid #d6d6d6;
+  background-color: #f1f1f1;
 }
 
 /*# sourceMappingURL=editor.css.map*/
