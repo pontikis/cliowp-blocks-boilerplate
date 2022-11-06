@@ -3,11 +3,14 @@
   \****************************************************************************************************************************************************************************************************************************************/
 /* 3rd party packages */
 /* Modules */
-.cliowp-container {
+.cliowp-block-container {
+  border-radius: 3px;
   padding: 20px;
-  border-radius: 2px;
-  border: 1px solid #d6d6d6;
+  border: 1px solid #cac8c8;
   background-color: #f1f1f1;
+}
+.cliowp-block-container label {
+  text-transform: none;
 }
 
 /*# sourceMappingURL=editor.css.map*/

@@ -40,24 +40,44 @@ class RegisterBlock {
     });
   }
   /**
-   * What will apperar in Gutenberg Editor
-   * @returns string
+   * @param {*} props - The block attributes
+   * @return {string} What will apperar in Gutenberg Editor
    */
 
 
   BlockInEditor(props) {
-    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+      className: "cliowp-block-container"
+    });
 
-    var labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate");
+    const labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate"),
+          labelMaintext = __("Main text:", "td-cliowp-blocks-boilerplate");
+    /**
+     * @param {?string} value - The value passed to headline
+     */
+
+
+    function updateHeadline(value) {
+      props.setAttributes({
+        headline: value
+      });
+    }
 
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
-      label: labelHeadline
-    }));
+      label: labelHeadline,
+      value: props.attributes.headline,
+      style: {
+        fontSize: "25px"
+      },
+      onChange: updateHeadline
+    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Flex, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, null, "Image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextareaControl, {
+      label: labelMaintext,
+      value: props.attributes.maintext
+    }))));
   }
   /**
-   * What will apperar in site front end
-   * Actually it is managed by PHP (using a render callback)
-   * @returns null
+   * @returns {null} - This is handled by PHP render callback
    */
 
 
@@ -129,7 +149,7 @@ module.exports = window["wp"]["element"];
   \********************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"cliowp-blocks/boilerplate","title":"ClioWP Blocks Boilerplate","category":"common","icon":"star-empty","description":"Free WordPress Gutenberg block-type Plugin Boilerplate for Developers","attributes":{"headline":{"type":"string"}},"textdomain":"td-cliowp-blocks-boilerplate","editorScript":"file:./build/editor.js","editorStyle":"file:./build/editor.css","script":"file:./build/frontend.js","style":"file:./build/frontend.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"cliowp-blocks/boilerplate","title":"ClioWP Blocks Boilerplate","category":"common","icon":"star-empty","description":"Free WordPress Gutenberg block-type Plugin Boilerplate for Developers","attributes":{"headline":{"type":"string"},"maintext":{"type":"string"}},"textdomain":"td-cliowp-blocks-boilerplate","editorScript":"file:./build/editor.js","editorStyle":"file:./build/editor.css","script":"file:./build/frontend.js","style":"file:./build/frontend.css"}');
 
 /***/ })
 
