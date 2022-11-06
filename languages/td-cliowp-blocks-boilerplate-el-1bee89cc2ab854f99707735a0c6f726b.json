@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2022-11-05 19:17+0000",
+    "translation-revision-date": "2022-11-06 08:46+0000",
     "generator": "Loco https://localise.biz/",
     "source": "src/modules/editor/RegisterBlock.js",
     "domain": "td-cliowp-blocks-boilerplate",
@@ -16,8 +16,8 @@
             "block title in Gutenberg\u0004ClioWP Blocks Boilerplate": [
                 "ClioWP \u03a0\u03c1\u03cc\u03c4\u03c5\u03c0\u03bf \u039c\u03c0\u03bb\u03bf\u03ba"
             ],
-            "Your message here...": [
-                "\u03a4\u03bf \u03bc\u03ae\u03bd\u03c5\u03bc\u03ac \u03c3\u03b1\u03c2 \u03b5\u03b4\u03ce..."
+            "Headline:": [
+                "\u0395\u03c0\u03b9\u03ba\u03b5\u03c6\u03b1\u03bb\u03af\u03b4\u03b1:"
             ]
         }
     }

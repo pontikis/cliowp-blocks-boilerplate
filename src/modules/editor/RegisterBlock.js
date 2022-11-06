@@ -1,6 +1,7 @@
 import { registerBlockType } from "@wordpress/blocks";
 import { useBlockProps } from "@wordpress/block-editor";
 import blockJson from "../../../block.json";
+import { TextControl } from "@wordpress/components";
 
 const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
 const _x = wp.i18n._x; // you may also use: import { _x } from "@wordpress/i18n";
@@ -24,17 +25,13 @@ class RegisterBlock {
      */
     BlockInEditor(props) {
 
-        const blockProps = useBlockProps({
-            className: "msg-input-in-editor"
-        });
+        const blockProps = useBlockProps();
 
-        function updateMessage(event) {
-            props.setAttributes({"message": event.target.value});
-        }
+        var labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate");
 
         return (
             <div {...blockProps}>
-                <input type="text" placeholder={__("Your message here...", "td-cliowp-blocks-boilerplate")} className="msg-input-in-editor" value={props.attributes.message} onChange={updateMessage} />
+                <TextControl label={labelHeadline} />
             </div>
         );
     }
