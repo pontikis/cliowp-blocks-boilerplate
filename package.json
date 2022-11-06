@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/pontikis/cliowp-blocks-boilerplate#readme",
   "devDependencies": {
+    "@wordpress/eslint-plugin": "^13.5.0",
     "@wordpress/scripts": "^24.1.0"
   }
 }
