@@ -15,7 +15,7 @@ class DisplayBlock {
             const myBlockDivs = document.getElementsByClassName("cliowp-block-instance");
 
             for (const div of myBlockDivs) {
-                const data = JSON.parse(div.getAttribute("data-blockprops"));
+                const data = JSON.parse(atob(div.getAttribute("data-blockprops")));
                 console.log(data);
                 ReactDOM.render(<MyComponent {...data} />, div);
             }
