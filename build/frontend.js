@@ -11,13 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _MyComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MyComponent */ "./src/modules/frontend/MyComponent.js");
-
-
+/* harmony import */ var _MyComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyComponent */ "./src/modules/frontend/MyComponent.js");
 
  //const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
 //const _x = wp.i18n._x; // you may also use: import { _x } from "@wordpress/i18n";
@@ -27,13 +21,13 @@ class DisplayBlock {
    * The constructor
    */
   constructor() {
-    document.addEventListener("DOMContentLoaded", function (event) {
+    document.addEventListener("DOMContentLoaded", function () {
       const myBlockDivs = document.getElementsByClassName("cliowp-block-instance");
 
       for (const div of myBlockDivs) {
         const data = JSON.parse(atob(div.getAttribute("data-blockprops")));
         console.log(data);
-        react_dom__WEBPACK_IMPORTED_MODULE_2___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_MyComponent__WEBPACK_IMPORTED_MODULE_3__["default"], data), div);
+        ReactDOM.render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_MyComponent__WEBPACK_IMPORTED_MODULE_1__["default"], data), div);
       }
     });
   }
@@ -53,15 +47,10 @@ class DisplayBlock {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "react-dom");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 
 
- // eslint-disable-next-line no-unused-vars
-
-class MyComponent extends (react__WEBPACK_IMPORTED_MODULE_1___default().Component) {
+// eslint-disable-next-line no-unused-vars
+class MyComponent extends React.Component {
   render() {
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, this.props.headline);
   }
@@ -81,26 +70,6 @@ class MyComponent extends (react__WEBPACK_IMPORTED_MODULE_1___default().Componen
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
-
-/***/ }),
-
-/***/ "react":
-/*!************************!*\
-  !*** external "React" ***!
-  \************************/
-/***/ (function(module) {
-
-module.exports = window["React"];
-
-/***/ }),
-
-/***/ "react-dom":
-/*!***************************!*\
-  !*** external "ReactDOM" ***!
-  \***************************/
-/***/ (function(module) {
-
-module.exports = window["ReactDOM"];
 
 /***/ }),
 
