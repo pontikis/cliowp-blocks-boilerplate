@@ -94,7 +94,10 @@ class ClioWP_Blocks_Boilerplate {
 	 */
 	public function render_callback( $attributes ) {
 		if ( isset( $attributes['headline'] ) && $attributes['headline'] ) {
-			return '<h2>' . esc_html( $attributes['headline'] ) . '</h2>';
+			ob_start(); ?>
+			<div class="cliowp-block-instance" data-blockprops='<?php echo wp_json_encode( $attributes ); ?>'></div>
+			<?php
+			return ob_get_clean();
 		}
 
 		return null;
