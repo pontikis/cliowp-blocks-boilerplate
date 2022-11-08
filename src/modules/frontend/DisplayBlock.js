@@ -1,5 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import MyComponent from "./MyComponent";
 
 //const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
@@ -11,7 +9,7 @@ class DisplayBlock {
      */
     constructor() {
 
-        document.addEventListener("DOMContentLoaded", function(event) {
+        document.addEventListener("DOMContentLoaded", function() {
             const myBlockDivs = document.getElementsByClassName("cliowp-block-instance");
 
             for (const div of myBlockDivs) {
