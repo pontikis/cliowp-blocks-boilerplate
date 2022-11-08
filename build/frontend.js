@@ -31,7 +31,7 @@ class DisplayBlock {
       const myBlockDivs = document.getElementsByClassName("cliowp-block-instance");
 
       for (const div of myBlockDivs) {
-        const data = JSON.parse(div.getAttribute("data-blockprops"));
+        const data = JSON.parse(atob(div.getAttribute("data-blockprops")));
         console.log(data);
         react_dom__WEBPACK_IMPORTED_MODULE_2___default().render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_MyComponent__WEBPACK_IMPORTED_MODULE_3__["default"], data), div);
       }
