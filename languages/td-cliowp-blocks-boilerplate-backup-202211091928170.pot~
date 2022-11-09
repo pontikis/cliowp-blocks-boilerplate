@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ClioWP Blocks Boilerplate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-05 19:15+0000\n"
+"POT-Creation-Date: 2022-11-06 08:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,12 +16,12 @@ msgstr ""
 "X-Loco-Version: 2.6.3; wp-6.1\n"
 "X-Domain: td-cliowp-blocks-boilerplate"
 
-#: build/editor.js:34 src/modules/editor/RegisterBlock.js:15
+#: build/editor.js:37 src/modules/editor/RegisterBlock.js:16
 msgctxt "block description in Gutenberg"
 msgid "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers"
 msgstr ""
 
-#: build/editor.js:33 src/modules/editor/RegisterBlock.js:14
+#: build/editor.js:36 src/modules/editor/RegisterBlock.js:15
 msgctxt "block title in Gutenberg"
 msgid "ClioWP Blocks Boilerplate"
 msgstr ""
@@ -38,14 +38,14 @@ msgstr ""
 msgid "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers"
 msgstr ""
 
+#: build/editor.js:51 src/modules/editor/RegisterBlock.js:30
+msgid "Headline:"
+msgstr ""
+
 #. URI of the plugin
 msgid "https://github.com/pontikis/cliowp-blocks-boilerplate"
 msgstr ""
 
 #. Author URI of the plugin
 msgid "https://pontikis.net"
-msgstr ""
-
-#: build/editor.js:58 src/modules/editor/RegisterBlock.js:37
-msgid "Your message here..."
 msgstr ""
