@@ -26,7 +26,8 @@ class DisplayBlock {
 
       for (const div of myBlockDivs) {
         const data = JSON.parse(atob(div.getAttribute("data-blockprops")));
-        console.log(data);
+        console.log(data); // TODO remove it
+
         ReactDOM.render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_MyComponent__WEBPACK_IMPORTED_MODULE_1__["default"], data), div);
       }
     });
