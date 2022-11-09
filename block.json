@@ -12,6 +12,10 @@
         },
         "maintext": {
             "type": "string"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f1f1f1"
         }
     },
     "textdomain": "td-cliowp-blocks-boilerplate",

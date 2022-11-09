@@ -1,7 +1,7 @@
 import { registerBlockType } from "@wordpress/blocks";
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
 import blockJson from "../../../block.json";
-import { TextControl, TextareaControl, Flex, FlexItem } from "@wordpress/components";
+import { TextControl, TextareaControl, Flex, FlexItem, PanelBody, PanelRow, ColorPicker } from "@wordpress/components";
 
 const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
 const _x = wp.i18n._x; // you may also use: import { _x } from "@wordpress/i18n";
@@ -33,7 +33,7 @@ class RegisterBlock {
     BlockInEditor(props) {
         // eslint-disable-next-line react-hooks/rules-of-hooks
         const blockProps = useBlockProps({
-            className: "cliowp-block-container",
+            className: "cliowp-block-container"
         });
 
         const labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate"),
@@ -47,7 +47,18 @@ class RegisterBlock {
         }
 
         return (
-            <div {...blockProps}>
+            <div {...blockProps} style={{ backgroundColor: props.attributes.bgColor }}>
+
+                {/* Right-hand Admin area options - ColorPicker */}
+                <InspectorControls>
+                    <PanelBody title="Background Color" initialOpen={true}>
+                        <PanelRow>
+                            <ColorPicker color={props.attributes.bgColor} onChangeComplete={x => props.setAttributes({ bgColor: x.hex })} />
+                        </PanelRow>
+                    </PanelBody>
+                </InspectorControls>
+
+                {/* Main block in Editor */}
                 <TextControl
                     label={labelHeadline}
                     value={props.attributes.headline}
