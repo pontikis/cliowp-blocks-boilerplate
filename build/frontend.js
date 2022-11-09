@@ -52,7 +52,11 @@ __webpack_require__.r(__webpack_exports__);
 // eslint-disable-next-line no-unused-vars
 class MyComponent extends React.Component {
   render() {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, this.props.headline);
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        backgroundColor: this.props.bgColor
+      }
+    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, this.props.headline));
   }
 
 }
