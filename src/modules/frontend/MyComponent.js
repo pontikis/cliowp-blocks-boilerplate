@@ -5,7 +5,7 @@ class MyComponent extends React.Component {
             <div style={{backgroundColor: this.props.bgColor}}>
                 <h1>{this.props.headline}</h1>
             </div>
-        )
+        );
     }
 }
 
