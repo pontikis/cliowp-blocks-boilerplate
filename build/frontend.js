@@ -28,7 +28,7 @@ class DisplayBlock {
         const data = JSON.parse(atob(div.getAttribute("data-blockprops")));
         console.log(data); // TODO remove it
 
-        ReactDOM.render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_MyComponent__WEBPACK_IMPORTED_MODULE_1__["default"], data), div);
+        ReactDOM.render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_MyComponent__WEBPACK_IMPORTED_MODULE_1__.MyComponent, data), div);
       }
     });
   }
@@ -46,23 +46,36 @@ class DisplayBlock {
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MyComponent": function() { return /* binding */ MyComponent; }
+/* harmony export */ });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
-
 // eslint-disable-next-line no-unused-vars
-class MyComponent extends React.Component {
-  render() {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      style: {
-        backgroundColor: this.props.bgColor
-      }
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, this.props.headline));
-  }
+// class MyComponent extends React.Component {
+//     render() {
+//         return (
+//             <div style={{backgroundColor: this.props.bgColor}}>
+//                 <h1>{this.props.headline}</h1>
+//             </div>
+//         );
+//     }
+// }
+// export default MyComponent;
 
+/**
+ *
+ * @param {*} props attributes
+ * @returns {string} component html
+ */
+function MyComponent(props) {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    style: {
+      backgroundColor: props.bgColor
+    }
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, props.headline));
 }
-
-/* harmony default export */ __webpack_exports__["default"] = (MyComponent);
 
 /***/ }),
 
