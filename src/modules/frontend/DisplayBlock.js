@@ -1,8 +1,5 @@
 import { MyComponent } from "./MyComponent";
 
-//const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
-//const _x = wp.i18n._x; // you may also use: import { _x } from "@wordpress/i18n";
-
 class DisplayBlock {
     /**
      * The constructor
