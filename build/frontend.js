@@ -13,8 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _MyComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyComponent */ "./src/modules/frontend/MyComponent.js");
 
- //const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
-//const _x = wp.i18n._x; // you may also use: import { _x } from "@wordpress/i18n";
+
 
 class DisplayBlock {
   /**
@@ -52,22 +51,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 
-// eslint-disable-next-line no-unused-vars
-// class MyComponent extends React.Component {
-//     render() {
-//         return (
-//             <div style={{backgroundColor: this.props.bgColor}}>
-//                 <h1>{this.props.headline}</h1>
-//             </div>
-//         );
-//     }
-// }
-// export default MyComponent;
 
 /**
+ * Functional React Component to display the block on the front end
  *
- * @param {*} props attributes
- * @returns {string} component html
+ * @param {*} props - Block attributes
+ * @returns {string} - The component html
  */
 function MyComponent(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {

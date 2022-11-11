@@ -9,6 +9,9 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "EditBlock": function() { return /* binding */ EditBlock; }
+/* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__);
@@ -22,58 +25,55 @@ __webpack_require__.r(__webpack_exports__);
 
 const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
 
-class EditBlock {
+/**
+ * Functional React Component to edit the block on the Gutenberg Editor
+ *
+ * @param {*} props - Block attributes
+ * @returns {string} - The component html
+ */
+
+function EditBlock(props) {
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+    className: "cliowp-block-container"
+  });
+
+  const labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate"),
+        labelMaintext = __("Main text:", "td-cliowp-blocks-boilerplate");
   /**
-   * @param {*} props - The block attributes
-   * @return {string} What will apperar in Gutenberg Editor
+   * @param {?string} value - The value passed to headline
    */
-  Edit(props) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-      className: "cliowp-block-container"
+
+
+  function updateHeadline(value) {
+    props.setAttributes({
+      headline: value
     });
-
-    const labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate"),
-          labelMaintext = __("Main text:", "td-cliowp-blocks-boilerplate");
-    /**
-     * @param {?string} value - The value passed to headline
-     */
-
-
-    function updateHeadline(value) {
-      props.setAttributes({
-        headline: value
-      });
-    }
-
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, blockProps, {
-      style: {
-        backgroundColor: props.attributes.bgColor
-      }
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-      title: "Background Color",
-      initialOpen: true
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPicker, {
-      color: props.attributes.bgColor,
-      onChangeComplete: x => props.setAttributes({
-        bgColor: x.hex
-      })
-    })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
-      label: labelHeadline,
-      value: props.attributes.headline,
-      style: {
-        fontSize: "25px"
-      },
-      onChange: updateHeadline
-    }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, "Image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
-      label: labelMaintext,
-      value: props.attributes.maintext
-    }))));
   }
 
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, blockProps, {
+    style: {
+      backgroundColor: props.attributes.bgColor
+    }
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: "Background Color",
+    initialOpen: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPicker, {
+    color: props.attributes.bgColor,
+    onChangeComplete: x => props.setAttributes({
+      bgColor: x.hex
+    })
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
+    label: labelHeadline,
+    value: props.attributes.headline,
+    style: {
+      fontSize: "25px"
+    },
+    onChange: updateHeadline
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, "Image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
+    label: labelMaintext,
+    value: props.attributes.maintext
+  }))));
 }
-
-/* harmony default export */ __webpack_exports__["default"] = (EditBlock);
 
 /***/ }),
 
@@ -98,11 +98,10 @@ class RegisterBlock {
    * The constructor
    */
   constructor() {
-    const editBlock = new _EditBlock__WEBPACK_IMPORTED_MODULE_2__["default"]();
     (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_1__, {
       title: _x("ClioWP Blocks Boilerplate", "block title in Gutenberg", "td-cliowp-blocks-boilerplate"),
       description: _x("Free WordPress Gutenberg block-type Plugin Boilerplate for Developers", "block description in Gutenberg", "td-cliowp-blocks-boilerplate"),
-      edit: editBlock.Edit,
+      edit: _EditBlock__WEBPACK_IMPORTED_MODULE_2__.EditBlock,
       save: this.BlockInFrontEnd
     });
   }
