@@ -94,7 +94,7 @@ class ClioWP_Blocks_Boilerplate {
 	 */
 	public function render_callback( $attributes ) {
 		if ( isset( $attributes['headline'] ) && $attributes['headline'] ) {
-            // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode111
+            // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
 			$attributes_encoded = base64_encode( wp_json_encode( $attributes ) );
 			ob_start(); ?>
 			<div class="cliowp-block-instance" data-blockprops="<?php echo esc_attr( $attributes_encoded ); ?>"></div>
