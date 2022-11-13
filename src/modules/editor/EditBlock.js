@@ -29,11 +29,15 @@ export function EditBlock(props) {
 
             {/* Right-hand Admin area options */}
             <InspectorControls>
-                <PanelBody title="Background Color">
+                <PanelBody title={__("Background Color:", "td-cliowp-blocks-boilerplate")} initialOpen={false}>
                     {/* ColorPicker - background color */}
                     <PanelRow>
-                        <ColorPicker color={props.attributes.bgColor} onChangeComplete={x => props.setAttributes({ bgColor: x.hex })} />
+                        <ColorPicker
+                            color={props.attributes.bgColor}
+                            onChangeComplete={x => props.setAttributes({ bgColor: x.hex })} />
                     </PanelRow>
+                </PanelBody>
+                <PanelBody title={__("Border Color:", "td-cliowp-blocks-boilerplate")} initialOpen={false}>
                     {/* ColorPicker - border color */}
                     <PanelRow>
                         <ColorPicker color={props.attributes.borderColor} onChangeComplete={x => props.setAttributes({ borderColor: x.hex })} />
