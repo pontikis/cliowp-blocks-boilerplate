@@ -31,25 +31,21 @@ const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n"
  * @param {*} props - Block attributes
  * @returns {string} - The component html
  */
-
 function EditBlock(props) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     className: "cliowp-block-container"
   });
-
   const labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate"),
-        labelMaintext = __("Main text:", "td-cliowp-blocks-boilerplate");
+    labelMaintext = __("Main text:", "td-cliowp-blocks-boilerplate");
+
   /**
    * @param {?string} value - The value passed to headline
    */
-
-
   function updateHeadline(value) {
     props.setAttributes({
       headline: value
     });
   }
-
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, blockProps, {
     style: {
       backgroundColor: props.attributes.bgColor
@@ -105,17 +101,14 @@ class RegisterBlock {
       save: this.BlockInFrontEnd
     });
   }
+
   /**
    * @returns {null} - This is handled by PHP render callback
    */
-
-
   BlockInFrontEnd() {
     return null;
   }
-
 }
-
 /* harmony default export */ __webpack_exports__["default"] = (RegisterBlock);
 
 /***/ }),
@@ -186,14 +179,12 @@ function _extends() {
   _extends = Object.assign ? Object.assign.bind() : function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
-
       for (var key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
           target[key] = source[key];
         }
       }
     }
-
     return target;
   };
   return _extends.apply(this, arguments);
@@ -289,8 +280,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_editor_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/editor.scss */ "./css/editor.scss");
 /* harmony import */ var _modules_editor_RegisterBlock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/editor/RegisterBlock */ "./src/modules/editor/RegisterBlock.js");
 
- // eslint-disable-next-line no-unused-vars
 
+
+// eslint-disable-next-line no-unused-vars
 const registerBlock = new _modules_editor_RegisterBlock__WEBPACK_IMPORTED_MODULE_1__["default"]();
 }();
 /******/ })()

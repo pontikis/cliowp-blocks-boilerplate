@@ -14,7 +14,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MyComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyComponent */ "./src/modules/frontend/MyComponent.js");
 
 
-
 class DisplayBlock {
   /**
    * The constructor
@@ -22,18 +21,14 @@ class DisplayBlock {
   constructor() {
     document.addEventListener("DOMContentLoaded", function () {
       const myBlockDivs = document.getElementsByClassName("cliowp-block-instance");
-
       for (const div of myBlockDivs) {
         const data = JSON.parse(atob(div.getAttribute("data-blockprops")));
         console.log(data); // TODO remove it
-
         ReactDOM.render((0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_MyComponent__WEBPACK_IMPORTED_MODULE_1__.MyComponent, data), div);
       }
     });
   }
-
 }
-
 /* harmony default export */ __webpack_exports__["default"] = (DisplayBlock);
 
 /***/ }),
@@ -50,7 +45,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-
 
 /**
  * Functional React Component to display the block on the front end
@@ -168,8 +162,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_frontend_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/frontend.scss */ "./css/frontend.scss");
 /* harmony import */ var _modules_frontend_DisplayBlock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/frontend/DisplayBlock */ "./src/modules/frontend/DisplayBlock.js");
 
- // eslint-disable-next-line no-unused-vars
 
+
+// eslint-disable-next-line no-unused-vars
 const displayBlock = new _modules_frontend_DisplayBlock__WEBPACK_IMPORTED_MODULE_1__["default"]();
 }();
 /******/ })()
