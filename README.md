@@ -43,10 +43,35 @@ Also it makes assets (JS and CSS) management more easy.
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 2,
     "name": "cliowp-blocks/boilerplate",
-    "title": "Hello Gutenberg",
+    "title": "ClioWP Blocks Boilerplate",
     "category": "common",
-    "icon": "universal-access",
-    "description": "Free WordPress Gutenberg block-type Plugin Example for Developers",
+    "icon": "star-empty",
+    "description": "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers",
+    "attributes": {
+        "headline": {
+            "type": "string",
+            "default": "Hello, Gutenberg!"
+        },
+        "bgColor": {
+            "type": "string",
+            "default": "#f1f1f1"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#cac8c8"
+        },
+        "headlineAlignment": {
+            "type": "string",
+            "default": "left"
+        }
+    },
+    "example": {
+        "headline": "Hello, Gutenberg!",
+        "bgColor": "#f1f1f1",
+        "borderColor": "#cac8c8",
+        "headlineAlignment": "left"
+    },
+    "textdomain": "td-cliowp-blocks-boilerplate",
     "editorScript": "file:./build/editor.js",
     "editorStyle": "file:./build/editor.css",
     "script": "file:./build/frontend.js",
