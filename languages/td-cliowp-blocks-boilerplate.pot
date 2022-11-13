@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ClioWP Blocks Boilerplate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-05 19:15+0000\n"
+"POT-Creation-Date: 2022-11-13 09:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,14 +16,22 @@ msgstr ""
 "X-Loco-Version: 2.6.3; wp-6.1\n"
 "X-Domain: td-cliowp-blocks-boilerplate"
 
-#: build/editor.js:34 src/modules/editor/RegisterBlock.js:15
+#: build/editor.js:55 src/modules/editor/EditBlock.js:32
+msgid "Background Color:"
+msgstr ""
+
+#: build/editor.js:108 src/modules/editor/RegisterBlock.js:17
 msgctxt "block description in Gutenberg"
 msgid "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers"
 msgstr ""
 
-#: build/editor.js:33 src/modules/editor/RegisterBlock.js:14
+#: build/editor.js:107 src/modules/editor/RegisterBlock.js:13
 msgctxt "block title in Gutenberg"
 msgid "ClioWP Blocks Boilerplate"
+msgstr ""
+
+#: build/editor.js:63 src/modules/editor/EditBlock.js:40
+msgid "Border Color:"
 msgstr ""
 
 #. Author of the plugin
@@ -38,6 +46,10 @@ msgstr ""
 msgid "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers"
 msgstr ""
 
+#: build/editor.js:38 src/modules/editor/EditBlock.js:17
+msgid "Headline:"
+msgstr ""
+
 #. URI of the plugin
 msgid "https://github.com/pontikis/cliowp-blocks-boilerplate"
 msgstr ""
@@ -46,6 +58,6 @@ msgstr ""
 msgid "https://pontikis.net"
 msgstr ""
 
-#: build/editor.js:58 src/modules/editor/RegisterBlock.js:37
-msgid "Your message here..."
+#: build/editor.js:39 src/modules/editor/EditBlock.js:18
+msgid "Main text:"
 msgstr ""
