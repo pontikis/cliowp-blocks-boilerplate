@@ -1,5 +1,5 @@
 import { useBlockProps, InspectorControls, BlockControls, AlignmentToolbar } from "@wordpress/block-editor";
-import { TextControl, TextareaControl, Flex, FlexItem, PanelBody, PanelRow, ColorPicker } from "@wordpress/components";
+import { TextControl, PanelBody, PanelRow, ColorPicker } from "@wordpress/components";
 
 const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
 
@@ -14,8 +14,7 @@ export function EditBlock(props) {
         className: "cliowp-block-container"
     });
 
-    const labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate"),
-        labelMaintext = __("Main text:", "td-cliowp-blocks-boilerplate");
+    const labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate");
 
     /**
      * @param {?string} value - The value passed to headline
@@ -57,15 +56,6 @@ export function EditBlock(props) {
                 style={{fontSize: "25px"}}
                 onChange={updateHeadline}
             />
-            <Flex>
-                <FlexItem>Image</FlexItem>
-                <FlexItem>
-                    <TextareaControl
-                        label={labelMaintext}
-                        value={props.attributes.maintext}
-                    />
-                </FlexItem>
-            </Flex>
         </div>
     );
 }

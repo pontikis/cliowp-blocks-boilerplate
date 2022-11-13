@@ -11,7 +11,6 @@ class DisplayBlock {
 
             for (const div of myBlockDivs) {
                 const data = JSON.parse(atob(div.getAttribute("data-blockprops")));
-                console.log(data); // TODO remove it
                 ReactDOM.render(<MyComponent {...data} />, div);
             }
         });

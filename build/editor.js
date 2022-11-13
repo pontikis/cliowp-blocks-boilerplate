@@ -35,8 +35,7 @@ function EditBlock(props) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     className: "cliowp-block-container"
   });
-  const labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate"),
-    labelMaintext = __("Main text:", "td-cliowp-blocks-boilerplate");
+  const labelHeadline = __("Headline:", "td-cliowp-blocks-boilerplate");
 
   /**
    * @param {?string} value - The value passed to headline
@@ -79,10 +78,7 @@ function EditBlock(props) {
       fontSize: "25px"
     },
     onChange: updateHeadline
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, "Image"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextareaControl, {
-    label: labelMaintext,
-    value: props.attributes.maintext
-  }))));
+  }));
 }
 
 /***/ }),
