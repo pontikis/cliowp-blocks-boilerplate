@@ -3,9 +3,14 @@
   \****************************************************************************************************************************************************************************************************************************************/
 /* 3rd party packages */
 /* Modules */
-.msg-input-in-editor {
-  width: 100%;
-  font-size: 25px;
+.cliowp-block-container {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 20px;
+}
+.cliowp-block-container label {
+  text-transform: none;
 }
 
 /*# sourceMappingURL=editor.css.map*/
