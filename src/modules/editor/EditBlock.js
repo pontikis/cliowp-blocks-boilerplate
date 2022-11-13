@@ -25,13 +25,18 @@ export function EditBlock(props) {
     }
 
     return (
-        <div {...blockProps} style={{ backgroundColor: props.attributes.bgColor }}>
+        <div {...blockProps} style={{ backgroundColor: props.attributes.bgColor, borderColor: props.attributes.borderColor }}>
 
-            {/* Right-hand Admin area options - ColorPicker */}
+            {/* Right-hand Admin area options */}
             <InspectorControls>
-                <PanelBody title="Background Color" initialOpen={true}>
+                <PanelBody title="Background Color">
+                    {/* ColorPicker - background color */}
                     <PanelRow>
                         <ColorPicker color={props.attributes.bgColor} onChangeComplete={x => props.setAttributes({ bgColor: x.hex })} />
+                    </PanelRow>
+                    {/* ColorPicker - border color */}
+                    <PanelRow>
+                        <ColorPicker color={props.attributes.borderColor} onChangeComplete={x => props.setAttributes({ borderColor: x.hex })} />
                     </PanelRow>
                 </PanelBody>
             </InspectorControls>

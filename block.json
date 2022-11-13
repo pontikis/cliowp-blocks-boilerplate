@@ -16,6 +16,10 @@
         "bgColor": {
             "type": "string",
             "default": "#f1f1f1"
+        },
+        "borderColor": {
+            "type": "string",
+            "default": "#cac8c8"
         }
     },
     "textdomain": "td-cliowp-blocks-boilerplate",

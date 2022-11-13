@@ -54,10 +54,12 @@ __webpack_require__.r(__webpack_exports__);
  */
 function MyComponent(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "cliowp-block-container-in-front-end",
     style: {
-      backgroundColor: props.bgColor
+      backgroundColor: props.bgColor,
+      borderColor: props.borderColor
     }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h1", null, props.headline));
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, props.headline));
 }
 
 /***/ }),

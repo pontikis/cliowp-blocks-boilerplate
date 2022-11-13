@@ -6,8 +6,8 @@
  */
 export function MyComponent(props) {
     return (
-        <div style={{backgroundColor: props.bgColor}}>
-            <h1>{props.headline}</h1>
+        <div className="cliowp-block-container-in-front-end" style={{backgroundColor: props.bgColor, borderColor: props.borderColor}}>
+            <h2>{props.headline}</h2>
         </div>
     );
 }
