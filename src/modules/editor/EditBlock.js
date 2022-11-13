@@ -1,4 +1,4 @@
-import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
+import { useBlockProps, InspectorControls, BlockControls, AlignmentToolbar } from "@wordpress/block-editor";
 import { TextControl, TextareaControl, Flex, FlexItem, PanelBody, PanelRow, ColorPicker } from "@wordpress/components";
 
 const __ = wp.i18n.__; // you may also use: import { __ } from "@wordpress/i18n";
@@ -27,7 +27,7 @@ export function EditBlock(props) {
     return (
         <div {...blockProps} style={{ backgroundColor: props.attributes.bgColor, borderColor: props.attributes.borderColor }}>
 
-            {/* Right-hand Admin area options */}
+            {/* The Settings Sidebar of Gutenberg */}
             <InspectorControls>
                 <PanelBody title={__("Background Color:", "td-cliowp-blocks-boilerplate")} initialOpen={false}>
                     {/* ColorPicker - background color */}
@@ -44,6 +44,11 @@ export function EditBlock(props) {
                     </PanelRow>
                 </PanelBody>
             </InspectorControls>
+
+            {/* The Block Popup Toolbar */}
+            <BlockControls>
+                <AlignmentToolbar value={props.attributes.headlineAlignment} onChange={newAlign => props.setAttributes({ headlineAlignment: newAlign })} />
+            </BlockControls>
 
             {/* Main block in Editor */}
             <TextControl

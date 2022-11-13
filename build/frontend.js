@@ -57,7 +57,8 @@ function MyComponent(props) {
     className: "cliowp-block-container-in-front-end",
     style: {
       backgroundColor: props.bgColor,
-      borderColor: props.borderColor
+      borderColor: props.borderColor,
+      textAlign: props.headlineAlignment
     }
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, props.headline));
 }

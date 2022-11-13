@@ -20,7 +20,17 @@
         "borderColor": {
             "type": "string",
             "default": "#cac8c8"
+        },
+        "headlineAlignment": {
+            "type": "string",
+            "default": "left"
         }
+    },
+    "example": {
+        "headline": "This is a headline",
+        "maintext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut maximus dui. Aenean mollis et metus sit amet vestibulum. Nullam pulvinar pretium finibus.",
+        "bgColor": "#f1f1f1",
+        "borderColor": "#cac8c8"
     },
     "textdomain": "td-cliowp-blocks-boilerplate",
     "editorScript": "file:./build/editor.js",
