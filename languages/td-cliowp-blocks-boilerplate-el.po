@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ClioWP Blocks Boilerplate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-05 19:15+0000\n"
-"PO-Revision-Date: 2022-11-09 19:28+0000\n"
+"PO-Revision-Date: 2022-11-13 09:22+0000\n"
 "Last-Translator: Christos\n"
 "Language-Team: Ελληνικά\n"
 "Language: el\n"
@@ -15,15 +15,23 @@ msgstr ""
 "X-Loco-Version: 2.6.3; wp-6.1\n"
 "X-Domain: td-cliowp-blocks-boilerplate"
 
-#: build/editor.js:104 src/modules/editor/RegisterBlock.js:20
+#: build/editor.js:55 src/modules/editor/EditBlock.js:32
+msgid "Background Color:"
+msgstr "Χρώμα φόντου:"
+
+#: build/editor.js:108 src/modules/editor/RegisterBlock.js:17
 msgctxt "block description in Gutenberg"
 msgid "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers"
 msgstr "ClioWP Πρότυπο Gutenberg Μπλοκ για WordPress Developers"
 
-#: build/editor.js:103 src/modules/editor/RegisterBlock.js:16
+#: build/editor.js:107 src/modules/editor/RegisterBlock.js:13
 msgctxt "block title in Gutenberg"
 msgid "ClioWP Blocks Boilerplate"
 msgstr "ClioWP Πρότυπο Μπλοκ"
+
+#: build/editor.js:63 src/modules/editor/EditBlock.js:40
+msgid "Border Color:"
+msgstr "Χρώμα πλαισίου:"
 
 #. Author of the plugin
 msgid "Christos Pontikis"
@@ -37,7 +45,7 @@ msgstr "ClioWP Πρότυπο Μπλοκ"
 msgid "Free WordPress Gutenberg block-type Plugin Boilerplate for Developers"
 msgstr "ClioWP Πρότυπο Gutenberg Μπλοκ για WordPress Developers"
 
-#: build/editor.js:36 src/modules/editor/EditBlock.js:17
+#: build/editor.js:38 src/modules/editor/EditBlock.js:17
 msgid "Headline:"
 msgstr "Επικεφαλίδα:"
 
@@ -49,6 +57,6 @@ msgstr "https://github.com/pontikis/cliowp-blocks-boilerplate"
 msgid "https://pontikis.net"
 msgstr "https://pontikis.net"
 
-#: build/editor.js:37 src/modules/editor/EditBlock.js:18
+#: build/editor.js:39 src/modules/editor/EditBlock.js:18
 msgid "Main text:"
 msgstr "Κείμενο:"

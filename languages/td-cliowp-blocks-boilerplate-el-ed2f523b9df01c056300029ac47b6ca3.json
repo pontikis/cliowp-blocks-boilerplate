@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2022-11-09 19:28+0000",
+    "translation-revision-date": "2022-11-13 09:22+0000",
     "generator": "Loco https://localise.biz/",
     "source": "src/modules/editor/EditBlock.js",
     "domain": "td-cliowp-blocks-boilerplate",
@@ -10,6 +10,12 @@
                 "lang": "el",
                 "plural-forms": "nplurals=2; plural=n != 1;"
             },
+            "Background Color:": [
+                "\u03a7\u03c1\u03ce\u03bc\u03b1 \u03c6\u03cc\u03bd\u03c4\u03bf\u03c5:"
+            ],
+            "Border Color:": [
+                "\u03a7\u03c1\u03ce\u03bc\u03b1 \u03c0\u03bb\u03b1\u03b9\u03c3\u03af\u03bf\u03c5:"
+            ],
             "Headline:": [
                 "\u0395\u03c0\u03b9\u03ba\u03b5\u03c6\u03b1\u03bb\u03af\u03b4\u03b1:"
             ],
