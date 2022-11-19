@@ -9,7 +9,7 @@
  * Text Domain: td-cliowp-blocks-boilerplate
  * Domain Path: /languages
  * Requires PHP: 5.6.20
- * Tested up to: 6.1
+ * Tested up to: 6.1.1
  * License: GPLv2 or later
  *
  * @package ClioWP_Blocks_Boilerplate
